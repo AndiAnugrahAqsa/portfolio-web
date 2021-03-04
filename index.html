@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>PortFolio Web | A. Anugrah Aqsa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Initial Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Initial CSS -->
+    <link rel="stylesheet" href="./stylesmaller.css">
+
+    <!-- Initial Responsive CSS -->
+    <link rel="stylesheet" href="responsive.css">
+
+    <!-- Initial FontAwesome -->
+    <script src="https://kit.fontawesome.com/c1dc23c88c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="./image/aqsa.png" alt="profil">
+            <h2>A. Anugrah Aqsa</h2>
+        </div>
+        <div class="navbar-list">
+            <ul class="list-item">
+                <li><a class="nav-link" href="#about">About</a></li>
+                <li><a class="nav-link" href="#project">Project</a></li>
+                <li><a class="nav-link" href="#contact">Contact</a></li>
+                <label title="Change to Light/Dark Mode" class="switches">
+                    <input id="change-mode" type="checkbox" oninput="changeMode()">
+                    <span class="slider"></span>
+                </label>
+            </ul>
+            <i class="menu-icon fas fa-bars"></i>
+        </div>
+    </div>
+
+    <div id="about" class="about">
+        <div class="container row">
+            <div class="about-text col-6">
+                <h2><span class="red">Hallo, </span>I'm A. Anugrah Aqsa</h2>
+                <h1>Currently I'm <span class="red">STUDYING</span> to</h1>
+                <h1>become a <span class="red">WEB DEVELOPER EXPERT</span></h1>
+                <p>Early 2020, when I first learned about how to build websites, I started by learning HTML, CSS, and
+                    JAVASCRIPT on several online course platforms such as Skill Akademy, Udemy and others. Now I am
+                    still learning about web development and would like to gain experience in order to create and
+                    develop a better website. 🙂😁
+                </p>
+                <div class="contact-about-content">
+                    <div>
+                        <button class="btn email">Email me</button>
+                    </div>
+                    <div>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-github"></i>
+                        <i class="fab fa-facebook"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="about-img-container">
+                <img src="./image/about-image.png" alt="Nda ada">
+            </div>
+        </div>
+    </div>
+
+    <div id="project" class="project">
+        <div class="container">
+            <h1>Project</h1>
+            <div class="project-content">
+                <h3>Lost and Found Web (Final Project Megabit)</h3>
+                <div class="project-image-container">
+                    <img src="image/Lost and Found Megabit.png" alt="">
+                </div>
+                <button class="btn">Description ...</button>
+            </div>
+            <div class="project-content">
+                <h3>Movies and Games List (Final Project Sanbercode)</h3>
+                <div class="project-image-container">
+                    <img src="image/Movie-list.png" alt="">
+                </div>
+                <button class="btn">Description ...</button>
+            </div>
+            <div class="project-content">
+                <h3>Landing Page Book (Challenge from frontendmentor.io)</h3>
+                <div class="project-image-container">
+                    <img src="image/Frontend-Mentor-Bookmark-landing-page.png" alt="">
+                </div>
+                <button class="btn">Description ...</button>
+            </div>
+            <div class="project-content">
+                <h3>To Do List Web (Practice of Course in Udemy)</h3>
+                <div class="project-image-container">
+                    <img src="image/To-do-list.png" alt="">
+                </div>
+                <button class="btn">Description ...</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact" class="contact">
+        <div class="contact-text">
+            <h1>Contact Me</h1>
+            <div class="icon-contact-container email-contact">
+                <i class="far fa-envelope"></i>
+                <p>andianugrahaqsa@gmail.com</p>
+            </div>
+            <div class="icon-contact-container facebook-contact">
+                <i class="fab fa-facebook"></i>
+                <p>Andi Anugrah Aqsa</p>
+            </div>
+            <div class="icon-contact-container intagram-contact">
+                <i class="fab fa-instagram"></i>
+                <p>andianugrahaqsa</p>
+            </div>
+        </div>
+        <div class="contact-image">
+            <img height="390" src="./image/Contact Us (Red Theme).png" alt="">
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Copyright 2021, Encoded by A. Anugrah Aqsa</p>
+    </footer>
+</body>
+
+<script src="./changemode.js"></script>
+
+</html>
