@@ -16,7 +16,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -83,7 +82,7 @@ body{
 	left: 0;
 	top: 0;
 	z-index: 100;
-    font-size: 16px;
+    font-size: 12x;
 }
 
 .logo{
@@ -92,13 +91,13 @@ body{
 }
 
 .logo img{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 	margin-right: 8px;
 }
 
 .logo h3{
-    line-height: 30px;
+    line-height: 25px;
 }
 
 /* .navbar-list ul{
@@ -184,24 +183,22 @@ body{
 
 
 .about-text h2{
-	font-size: 12px;
 	font-family: 'Noto Sans KR', 'san-serif';
 	font-weight: 600;
 }
 
 .about-text h1{
-	font-size: 16px;
 	font-family: 'Noto Sans KR', 'san-serif';
 	font-weight: 900;
 	margin-top: 15px;
+    font-size: 26px;
 }
 
 .about-text p{
 	text-align: justify;
 	font-family: roboto, san-serif;
-	line-height: 15px;
+	line-height: 20px;
 	margin-top: 20px;
-    font-size: 10px;
 }
 
 .about-img-container{
@@ -212,12 +209,9 @@ body{
 	width: 100%;
 }
 
-div.contact-about-content{
-	margin-top: 20px;
-}
-
-button.email, .contact-about-content i:not(:last-child){
-	margin-right: 45px;
+.contact-about-content{
+	margin-top: 30px;
+    text-align: center;
 }
 
 button.email{
@@ -227,13 +221,19 @@ button.email{
 	padding: 0;
 	position: relative;
 	top: -8px;
+    margin-bottom: 10px;
 }
 
 /* Icon Styling */
+.contact-about-content i:not(:last-child){
+	margin-right: 35px;
+}
+
 .contact-about-content i {
 	font-size: 30px;
 	color: rgba( 255, 0, 0, 0.7);
 }
+
 .contact-about-content i:hover {
 	color: rgba( 255, 0, 0, 1);
 	cursor: pointer;
@@ -248,7 +248,7 @@ button.email{
 	font-family: roboto, san-serif;
 }
 .project h1{
-	font-size: 20px;
+	font-size: 30px;
 	color: red;
 	font-weight: bold;
 }
@@ -259,7 +259,7 @@ button.email{
 
 .project .project-image-container{
 	width: 100%;
-	height: 100px;
+	height: 160px;
 	overflow: auto;
 	margin: 15px 0;
 	box-shadow: 0 0 50px 10px black;
@@ -280,22 +280,21 @@ button.email{
 
 /* Contact Container Styling */
 .contact{
-	margin-top: 150px;
-	padding: 30px 20px 70px;
+	margin-top: 70px;
+	padding: 30px 20px 50px;
 	font-family: roboto, san-serif;
 	background-color: #0F0F0F;
-	display: flex;
 	justify-content: space-between;
+    text-align: center;
 }
 
 .contact h1{
-	font-size: 20px;
+	font-size: 30px;
 	margin-top: 10px;
 }
 
 .icon-contact-container{
-	display: flex;
-	margin-top: 40px;
+	margin-top: 20px;
 }
 
 .icon-contact-container:hover{
@@ -310,7 +309,6 @@ button.email{
 
 .contact p{
 	line-height: 20px;
-	font-size: 16px;
 }
 
 .contact-image{
