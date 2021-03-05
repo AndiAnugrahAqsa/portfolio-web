@@ -16,8 +16,6 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -77,7 +75,7 @@ body{
 	background-color: rgb(33, 33, 33);
     display: flex;
 	justify-content: space-between;
-    padding: 30px 70px;
+    padding: 1.8% 5.4%;
 	font-family: 'Noto Sans KR', 'san-serif';
 	position: fixed;
 	right: 0;
@@ -97,23 +95,29 @@ body{
 	margin-right: 15px;
 }
 
-.logo h2{
+.logo h3{
     line-height: 35px;
 }
 
 .navbar-list ul{
-	display: flex;
-	line-height: 35px;
+	display: none;
 }
 
 
 .navbar-list li {
 	margin: 0 30px;
+	float: left
 }
 
 .navbar-list li a {
 	color: rgb(216, 216, 216);
 	text-decoration: none;
+}
+
+.menu-icon{
+	display: inline-block;
+	font-size: 20px;
+	line-height: 35px;
 }
 
 
@@ -163,18 +167,21 @@ body{
 	background-color: red;
 }
 
+
+
 /* About Container */
 .about{
-	padding-top: 100px;
+	padding-top: 7.5%;
 }
 
 .about .container{
-	padding: 150px;
+	padding: 11%;
 	display: flex;
 }
 
 .about-text{
 	flex: 70%;
+	text-align: center;
 }
 
 .about-text h2{
@@ -191,7 +198,7 @@ body{
 }
 
 .about-text p{
-	width: 565px;
+	width: 100%;
 	text-align: justify;
 	font-family: roboto, san-serif;
 	line-height: 25px;
@@ -199,7 +206,8 @@ body{
 }
 
 .about-img-container{
-	flex: 30%;	
+	flex: 30%;
+	display: none;
 }
 
 .about-img-container img{
@@ -210,7 +218,7 @@ div.contact-about-content{
 	margin-top: 20px;
 }
 
-button.email, .contact-about-content i:not(:last-child){
+.contact-about-content i:not(:last-child){
 	margin-right: 45px;
 }
 
@@ -220,11 +228,11 @@ button.email{
 	width: 154px;
 	padding: 0;
 	position: relative;
-	top: -8px;
 }
 
 /* Icon Styling */
 .contact-about-content i {
+	margin-top: 30px;
 	font-size: 30px;
 	color: rgba( 255, 0, 0, 0.7);
 }
@@ -237,30 +245,34 @@ button.email{
 
 /* Project Container */
 .project{
-	padding: 0 150px;
+	padding: 0 11%;
 	font-family: roboto, san-serif;
 }
+
 .project h1{
-	font-size: 42px;
+	font-size: 30px;
 	color: red;
 	font-weight: bold;
 }
 
 .project .project-content{
-	padding: 50px 85px 30px;
+	padding: 50px 6% 30px;
 }
 
 .project .project-image-container{
 	width: 100%;
-	height: 395px;
+	height: 31vw;
 	overflow: auto;
 	margin: 15px 0;
 	box-shadow: 0 0 50px 10px black;
 }
 
 .project .project-image-container img{
-	width: 100%;
-	
+	width: 100%;	
+}
+
+.project h3{
+	font-size: 12px;
 }
 
 .project button{
@@ -275,21 +287,20 @@ button.email{
 /* Contact Container Styling */
 .contact{
 	margin-top: 150px;
-	padding: 30px 90px 70px;
+	padding: 3% 6.5% 70px;
 	font-family: roboto, san-serif;
 	background-color: #0F0F0F;
-	display: flex;
-	justify-content: space-between;
+	text-align: center;
 }
 
 .contact h1{
-	font-size: 42px;
+	font-size: 30px;
 	margin-top: 30px;
 	margin-bottom: 10px;
 }
 
 .icon-contact-container{
-	display: flex;
+	display: block;
 	margin-top: 40px;
 }
 
@@ -298,28 +309,120 @@ button.email{
 }
 
 .contact i{
-	font-size: 50px;
-	width: 50px;
-	text-align: center;
+	font-size: 30px;
 }
 
 .contact p{
-	line-height: 50px;
-	font-size: 30px;
-	margin-left: 30px;
+	line-height: 30px;
+	font-size: 16px;
+}
+
+.contact-image{
+	display: none;
 }
 
 /* Footer Styling */
 footer{
-	height: 65px;
-	font-size: 16px;
+	font-family: roboto, sans-serif;
+	height: 50px;
+	font-size: 12px;
 	color: black;
 	background-color: red;
 	text-align: center;
-	line-height: 65px;
+	line-height: 50px;
 }
 
 /* COLOR */
 .red{
 	color: red;
+}
+
+
+/* Style for desctop */
+@media screen and (min-width : 600px){
+	
+	.navbar-list ul{
+		display: inline-block;
+		line-height: 35px;
+	}
+
+	i.menu-icon{
+		display: none;
+	}
+
+	/* .about{
+		padding-top: 100px;
+	} */
+
+	.about-text{
+		text-align: left;
+	}
+
+	.new-line-for-heading{
+		display: block;
+	}
+	
+	.about-text p{
+		width: 41.5vw;
+	}
+
+	.about-img-container{
+		display: inline-block;
+	}
+
+	button.email, .contact-about-content i{
+		float: left;
+		margin-right: 45px;
+		display: inline-block;
+	}
+
+	.contact-about-content i{
+		line-height: 33px
+	}
+
+	.project h1{
+		font-size: 42px;
+	}
+
+
+
+	.contact{
+		display: flex;
+		justify-content: space-between;
+		text-align: left;
+	}
+
+
+	.contact h1{
+		font-size: 32px;
+	}
+
+	.icon-contact-container{
+		display: flex;
+		margin-top: 40px;
+		text-align: center;
+	}
+
+	.contact i{
+		font-size: 50px;
+		width: 50px;
+		text-align: center;
+	}
+
+	.contact p{
+		line-height: 50px;
+		font-size: 30px;
+		margin-left: 30px;
+	}
+
+	.contact-image{
+		display: block;
+	}
+
+
+	footer{
+		height: 65px;
+		font-size: 16px;
+		line-height: 65px;
+	}
 }
