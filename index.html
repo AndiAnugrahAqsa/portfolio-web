@@ -29,16 +29,21 @@
     <!-- Initial Responsive CSS -->
     <link rel="stylesheet" href="responsive.css">
 
+    <!-- Initial Animation CSS -->
+    <link rel="stylesheet" href="./animation.css">
+
+    <script src="./changemode.js"></script>
+
 </head>
 
-<body>
+<body onscroll="scrollAnimation()">
     <div class="navbar">
         <div class="logo">
             <img src="./image/aqsa.png" alt="profil">
             <h3>A. Anugrah Aqsa</h3>
         </div>
         <div class="navbar-list">
-            <ul class="list-item">
+            <ul id="list-item" class="list-item">
                 <li><a class="nav-link" href="#about">About</a></li>
                 <li><a class="nav-link" href="#project">Project</a></li>
                 <li><a class="nav-link" href="#contact">Contact</a></li>
@@ -47,7 +52,10 @@
                     <span class="slider"></span>
                 </label>
             </ul>
-            <i class="menu-icon fas fa-bars"></i>
+            <button id="nav-button" class="nav-button" onclick="showNavMenu()">
+                <i class="menu-icon show-bar fas fa-bars"></i>
+                <i class="close-icon fas fa-times"></i>
+            </button>
         </div>
     </div>
 
@@ -141,8 +149,12 @@
     <footer>
         <p>Copyright 2021, Encoded by A. Anugrah Aqsa</p>
     </footer>
+
+
+
+
+
 </body>
 
-<script src="./changemode.js"></script>
 
 </html>

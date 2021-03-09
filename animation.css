@@ -1,0 +1,21 @@
+/* Animation Styling */
+
+.navbar, .about, .project{
+	animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+@keyframes fadeInOut {
+	from{
+		top : 100px;
+	}
+	
+	to{
+		opacity: 1;
+		top: 0;
+	}
+}

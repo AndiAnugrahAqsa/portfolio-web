@@ -1,9 +1,12 @@
+// CHANGE MODE
+
 function changeMode() {
 
     // Univesal variable scope
     var body = document.body;
     var navbar = document.getElementsByClassName("navbar")[0];
     var contact = document.getElementsByClassName("contact")[0];
+    var listMenu = document.getElementById("list-item");
     var projectImages = document.getElementsByClassName("project-image-container");
     var navLinks = document.getElementsByClassName("nav-link");
 
@@ -13,6 +16,7 @@ function changeMode() {
         body.style.backgroundColor = "#fff";
         body.style.color = "black";
         navbar.style.backgroundColor = "#fff";
+        listMenu.style.backgroundColor = "rgba(255, 255, 255, .9)";
         contact.style.backgroundColor = "rgb(180, 0, 0)";
         contact.style.color = "#fff";
         for (var i = 0; i < navLinks.length; i++) {
@@ -27,6 +31,7 @@ function changeMode() {
         body.style.backgroundColor = "rgb(33, 33, 33)";
         body.style.color = "rgb(216, 216, 216)";
         navbar.style.backgroundColor = "rgb(33, 33, 33)";
+        listMenu.style.backgroundColor = "rgba(33, 33, 33, 0.9)";
         contact.style.backgroundColor = "#0F0F0F";
         contact.style.color = "rgb(216, 216, 216)";
         for (var i = 0; i < navLinks.length; i++) {
@@ -43,5 +48,46 @@ function changeMode() {
         ligthModeStyle()
     } else {
         darkModeStyle()
+    }
+}
+
+
+
+
+// SHOW NAVBAR MENU
+
+function showNavMenu() {
+    let navButton = document.getElementById("nav-button");
+    let listItem = document.getElementById("list-item")
+    let menuIcon = document.getElementsByClassName("menu-icon")[0];
+    let closeIcon = document.getElementsByClassName("close-icon")[0];
+
+
+    menuIcon.classList.toggle("show-bar");
+    closeIcon.classList.toggle("show-bar");
+    listItem.classList.toggle("show-bar");
+}
+
+function scrollAnimation() {
+    var position = window.pageYOffset;
+    let projectContent = document.getElementsByClassName("project-content");
+    let contact = document.getElementById("contact");
+    let footer = document.getElementsByTagName("footer")[0];
+    console.log(position);
+    if (position >= 200) {
+        projectContent[0].style.animation = "fadeInOut 2s ease-out forwards"
+    }
+    if (position >= 650) {
+        projectContent[1].style.animation = "fadeInOut 2s ease-out forwards"
+    }
+    if (position >= 1250) {
+        projectContent[2].style.animation = "fadeInOut 2s ease-out forwards"
+    }
+    if (position >= 1900) {
+        projectContent[3].style.animation = "fadeInOut 2s ease-out forwards"
+    }
+    if (position >= 2600) {
+        contact.style.animation = "fadeInOut 2s ease-out forwards";
+        footer.style.animation = "fadeInOut 2s ease-out forwards";
     }
 }

@@ -81,12 +81,13 @@ body{
 	right: 0;
 	left: 0;
 	top: 0;
-	z-index: 100;
+	z-index: 1;
 }
 
 .logo{
     display: flex;
 	font-weight: bold;
+	position: relative;
 }
 
 .logo img{
@@ -99,14 +100,30 @@ body{
     line-height: 35px;
 }
 
-.navbar-list ul{
+.list-item{
 	display: none;
 }
 
+.list-item {
+	position: absolute;
+	text-align: center;
+	background-color: rgba(33, 33, 33, 0.9);
+	top: 99%;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	border-top: solid 0.5px rgb(22, 22, 22);
+	border-bottom: solid 0.5px rgb(22, 22, 22);
+	z-index: 100;
+}
 
-.navbar-list li {
-	margin: 0 30px;
-	float: left
+.list-item > *:last-child{
+	margin: 15px 0;
+}
+
+.list-item > *:not(:last-child){
+	padding: 20px;
+	border-bottom: solid 0.5px rgb(22, 22, 22);
 }
 
 .navbar-list li a {
@@ -114,17 +131,30 @@ body{
 	text-decoration: none;
 }
 
-.menu-icon{
+.nav-button{
+	background-color: transparent;
+	border: none;
 	display: inline-block;
 	font-size: 20px;
-	line-height: 35px;
+	color: rgb(216, 216, 216);
 }
+
+.nav-button{
+	outline: none;
+}
+
+.menu-icon, .close-icon{
+	line-height: 35px;
+	display: none;
+}
+
 
 
 /* Switches */
 .switches{
 	display: inline-block;
 	width: 50px;
+	height: 35px;
 	cursor: pointer;
 	position: relative;
 }
@@ -180,7 +210,7 @@ body{
 }
 
 .about-text{
-	flex: 70%;
+	flex: 2;
 	text-align: center;
 }
 
@@ -206,7 +236,7 @@ body{
 }
 
 .about-img-container{
-	flex: 30%;
+	flex: 1;
 	display: none;
 }
 
@@ -257,6 +287,8 @@ button.email{
 
 .project .project-content{
 	padding: 50px 6% 30px;
+	position: relative;
+	opacity: 0;
 }
 
 .project .project-image-container{
@@ -291,6 +323,8 @@ button.email{
 	font-family: roboto, san-serif;
 	background-color: #0F0F0F;
 	text-align: center;
+	position: relative;
+	opacity: 0;
 }
 
 .contact h1{
@@ -330,6 +364,8 @@ footer{
 	background-color: red;
 	text-align: center;
 	line-height: 50px;
+	position: relative;
+	opacity: 0;
 }
 
 /* COLOR */
@@ -337,13 +373,42 @@ footer{
 	color: red;
 }
 
+.show-bar{
+	display: block;
+}
+
 
 /* Style for desctop */
-@media screen and (min-width : 600px){
+@media screen and (min-width : 769px){
 	
 	.navbar-list ul{
 		display: inline-block;
 		line-height: 35px;
+	}
+
+	.navbar-list li {
+		margin: 0 30px;
+		float: left
+	}
+
+	.list-item {
+		position: static;
+		text-align: center;
+		background-color: rgba(33, 33, 33, 0.9);
+		top: 0;
+		left: 0;
+		right: 0;
+		border: none;
+		height: 0;
+	}
+	
+	.list-item > *:last-child{
+		margin: 0;
+	}
+	
+	.list-item > *:not(:last-child){
+		padding: 0;
+		border: none;
 	}
 
 	i.menu-icon{
@@ -377,15 +442,14 @@ footer{
 	}
 
 	.contact-about-content i{
+		margin-top: 0;
 		line-height: 33px
 	}
 
 	.project h1{
 		font-size: 42px;
 	}
-
-
-
+	
 	.contact{
 		display: flex;
 		justify-content: space-between;
