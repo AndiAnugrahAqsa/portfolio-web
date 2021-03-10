@@ -68,26 +68,27 @@ function showNavMenu() {
     listItem.classList.toggle("show-bar");
 }
 
+
+
+
 function scrollAnimation() {
-    var position = window.pageYOffset;
+    let position = window.pageYOffset;
     let projectContent = document.getElementsByClassName("project-content");
     let contact = document.getElementById("contact");
     let footer = document.getElementsByTagName("footer")[0];
-    console.log(position);
-    if (position >= 200) {
-        projectContent[0].style.animation = "fadeInOut 2s ease-out forwards"
+    const elements = [...projectContent, contact];
+
+
+    // Animation For Desctop
+    elements.forEach(element => {
+        if (position >= element.offsetTop - 300) {
+            element.style.animation = "fadeInOut 1.5s ease-out forwards"
+        }
+    });
+
+    if (position >= contact.offsetTop - 300) {
+        footer.style.animation = "fadeInOut 1.5s ease-out forwards"
     }
-    if (position >= 650) {
-        projectContent[1].style.animation = "fadeInOut 2s ease-out forwards"
-    }
-    if (position >= 1250) {
-        projectContent[2].style.animation = "fadeInOut 2s ease-out forwards"
-    }
-    if (position >= 1900) {
-        projectContent[3].style.animation = "fadeInOut 2s ease-out forwards"
-    }
-    if (position >= 2600) {
-        contact.style.animation = "fadeInOut 2s ease-out forwards";
-        footer.style.animation = "fadeInOut 2s ease-out forwards";
-    }
+
+
 }
