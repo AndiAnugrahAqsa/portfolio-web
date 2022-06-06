@@ -1,0 +1,13 @@
+footer {
+	background-color: black;
+}
+
+#contact a {
+	color: white;
+}
+
+
+.project-image-container {
+	max-height: 500px;
+	overflow: auto;
+}
